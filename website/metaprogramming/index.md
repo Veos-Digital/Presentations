@@ -46,9 +46,41 @@ layout: true
 
 ### Macros: convert expression typed in by user
 
-#### Example: JuMP (optimization package)
+.container[
+Inherited from LISP language.
+
+Translate expression into novel expressions, which are then evaluated.
+]
+
+--
 
 .container[
+#### Examples
+
+```julia
+julia> @time sin.(rand(2))
+  0.000003 seconds (2 allocations: 192 bytes)
+2-element Array{Float64,1}:
+ 0.3465147188587482
+ 0.5578638085440257
+
+julia> @test 3 * 4 == 34
+Test Failed at REPL[17]:1
+  Expression: 3 * 4 == 34
+   Evaluated: 12 == 34
+ERROR: There was an error during testing
+```
+]
+
+---
+
+### Macros: convert expression typed in by user
+
+.container[
+Macros can be used to create syntax specific to a domain.
+
+#### Example: JuMP (optimization package)
+
 ```julia
 julia> @variable model 0 <= x <= 2
 x
@@ -81,7 +113,7 @@ end
 ### Possible applications in machine learning / data science
 
 .container[
-- Probabilistic programming (Turing.jl)
+#### Probabilistic programming (Turing.jl)
 
 ```julia
 @model function coinflip(y)
@@ -101,7 +133,7 @@ end
 --
 
 .container[
-- Data wrangling (DataFramesMeta.jl)
+#### Data wrangling (DataFramesMeta.jl)
 
 ```julia
 julia> @where df :x .> x :y .== 3
@@ -195,16 +227,32 @@ CodeInfo(
 ### Possible use case: memoization
 
 .container[
+Store results of previous function evaluations and do not recompute.
+
+#### Example: silly Fibonacci definition
+
+```julia
+fib(n) = n <= 1 ? n : fib(n - 2) + fib(n - 1)
+```
+
+`fib(n)` takes exponential time to compute.
+]
+
+---
+
+count: false
+
+### Possible use case: memoization
+
+.container[
 ```julia
 using Cassette: Cassette, @context, overdub, recurse
 
-fib(x) = x == 0 ? 0 : x == 1 ? 1 : fib(x - 2) + fib(x - 1)
-
 @context MemoizeCtx
 
-function Cassette.overdub(ctx::MemoizeCtx, ::typeof(fib), x)
-    get!(ctx.metadata, x) do
-        recurse(ctx, fib, x)
+function Cassette.overdub(ctx::MemoizeCtx, ::typeof(fib), n)
+    get!(ctx.metadata, n) do
+        recurse(ctx, fib, n)
     end
 end
 ```
