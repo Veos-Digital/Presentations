@@ -810,6 +810,50 @@ as well as their continuous counterpart such as Neural ODEs.
 
 ---
 
+### Future directions: quiver machines
+
+.column-left[
+<img src="assets/continuous_architecture.svg" width="50%">
+
+]
+
+.column-right[
+<img src="assets/foliation.svg" width="50%">
+
+<small>Image credits: Ilya Voyager</small>
+]
+
+---
+
+count: false
+
+### Future directions: quiver machines
+
+
+.column-left[
+<img src="assets/continuous_architecture.svg" width="50%">
+
+<br>
+
+<img src="assets/diagram.svg" width="50%">
+
+]
+
+.column-right[
+<img src="assets/foliation.svg" width="50%">
+
+<small>Image credits: Ilya Voyager</small>
+]
+
+--
+
+.column-right[
+<img src="assets/ECG.png" width="70%">
+
+<small>Olszewski - 2001</small>
+]
+
+---
 layout: false
 class: center
 
