@@ -601,6 +601,48 @@ We look for $K$ such that the evaluation map $\varrho\colon H \times X \rightarr
 
 ---
 
+### Kernel machines
+
+.column-left[
+**Theorem.** Let $\\{ x\_i \\}\_1 ^n$ be a training dataset.
+For every machine $f \in H$, there exists a machine $\hat f \in H$ of the form
+$$\hat f = \sum_{i=1}^n K(-, x_i) c_i$$
+such that
+- stable states of $f$ and $\hat f$ agree on $\\{ x\_i \\}\_1 ^n$,
+- $\lVert \hat f \rVert \le \lVert f \rVert$.
+]
+
+---
+
+count: false
+
+### Kernel machines
+
+.column-left[
+**Theorem.** Let $\\{ x\_i \\}\_1 ^n$ be a training dataset.
+For every machine $f \in H$, there exists a machine $\hat f \in H$ of the form
+$$\hat f = \sum_{i=1}^n K(-, x_i) c_i$$
+such that
+- stable states of $f$ and $\hat f$ agree on $\\{ x\_i \\}\_1 ^n$,
+- $\lVert \hat f \rVert \le \lVert f \rVert$.
+
+<br>
+
+Actual number of parameters: $\dim(X) \cdot n$.
+]
+
+--
+
+.column-right[
+**Action plan.**
+- Choose suitable spaces $X$, either finite-dimensional, e.g. $\mathbb R^d$, or infinite-dimensional, e.g. $L_2([0, 1], \mathbb R ^d)$.
+
+- Choose a kernel $K$ on $X$ such that $\varrho\colon H \times X \rightarrow X$ is a parametric machines.
+
+- Explore the smaller subspace of machines of the form $$\sum_{i=1}^n K(-, x_i) c_i.$$
+]
+---
+
 ### Finite-depth kernel machines - Applications
 #### Fitting a 2d polynomial
 
