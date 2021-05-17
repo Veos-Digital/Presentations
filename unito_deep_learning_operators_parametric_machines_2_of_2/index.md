@@ -1,6 +1,5 @@
 <div class="row" style="width:100%;margin-top:200px">
-  <h1 class="almost_white">Parametric machines: a fresh approach to
-                           architecture search</h1>
+  <h1 class="almost_white">From parametric to quiver machines</h1>
   <h3 class="almost_white">Pietro Vertechi & Mattia Bergomi</h3>
   <h4 class="almost_white">{pietro.vertechi, mattia.bergomi}@veos.digital</h4>
 </div>
@@ -23,8 +22,7 @@ layout: true
 
 - Introduction
   - Historical overview
-  - Aim
-  - Contributions
+  - Aims and contributions
 - Machines
   - Stable state
   - Parameterization
@@ -39,8 +37,9 @@ layout: true
   - Applications
   - Infinite-depth kernel machines
   - Applications
-- Quiver machines
 - Conclusions
+- Future directions
+  - Quiver machines
 
 ---
 
@@ -438,6 +437,8 @@ overall performance of the network.
 
 ---
 
+exclude: true
+
 ### Contraction principle
 
 .container[
@@ -495,7 +496,7 @@ as infinite-dimensional vector spaces, with a *dot* product.
 .container[
 *Continuous machines* can be defined in the setting of functional analysis.
 
-Let $K(t, s, u)$ be a function $\mathbb R \times \mathbb R \times X \rightarrow X$,
+Let $K(t, s, u)$ be a function $[0, 1] \times [0, 1] \times X \rightarrow X$,
 with some regularity assumption (uniformly Lipschitz in $u$).
 ]
 
@@ -816,6 +817,8 @@ as well as their continuous counterpart such as Neural ODEs.
 <img src="assets/continuous_architecture.svg" width="50%">
 
 ]
+
+--
 
 .column-right[
 <img src="assets/foliation.svg" width="50%">
