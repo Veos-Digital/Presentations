@@ -808,12 +808,12 @@ performance of $\approx 50\%$.
 ### Conclusions
 
 .container[
-- We provide a solid categorical foundation for the study of deep neural networks.
+- We provide a solid theoretical foundation for the study of deep neural networks.
 
 - The stable state generalizes the computation of a feedforward neural network.
 
 - This notion encompasses both manually designed neural network architectures,
-as well as their continuous counterpart such as Neural ODEs.
+as well as their continuous counterparts such as Neural ODEs.
 
 - We show how to build a complex machine from smaller machines with independence assumptions.
 
