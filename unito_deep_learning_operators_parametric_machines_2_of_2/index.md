@@ -257,8 +257,8 @@ We say that an endofunction $f$ is a *machine* if, for any $x_0$, there is a uni
 $$x = f(x) + x_0,$$
 and this unique solution depends smoothly on $x_0$.
 
-Given a function in two arguments $f(x, p)$, we say that $f$ is a *parametric machine*
-if, for all $p$, $f(-, p)$ is a machine, and $(x\_0, p) \mapsto x$ is smooth.
+Given a function in two arguments $f(p, x)$, we say that $f$ is a *parametric machine*
+if, for all $p$, $f(p, -)$ is a machine, and $(p, x\_0) \mapsto x$ is smooth.
 ]
 
 ---
@@ -308,7 +308,11 @@ $$X_0 \xrightarrow{l_1} X_1 \xrightarrow{l_2} \dots \xrightarrow{l_n} X_n,$$
 The stable state can be computed as follows:
 
 $$(I - l_1 - \cdots - l_n) ^{-1} = (I + l_n) \cdots (I + l_1).$$
+]
 
+--
+
+.container[
 In practice:
 
 \\[
@@ -508,6 +512,14 @@ $$(\mathcal{F} u)(t) = \int_0^t K(t, s, u(s)) ds$$
 is a *machine* on $L_2([0, 1], X)$.
 ]
 
+--
+
+.container[
+Stable state is solution of nonlinear integral Volterra equation of second kind:
+
+$$ \psi \mapsto \phi \,\, \text{ where, for all } t \in [0, 1], \,\, \phi(t) = \psi(t) + \int_0^t K(t, s, \phi(s)) ds$$
+]
+
 ---
 
 exclude: true
@@ -585,7 +597,7 @@ and $K \colon X \times X \rightarrow \mathcal{L}(X)$ a kernel such that
 --
 
 .column-right[
-$K$ defines a Hilbert space of functions $X$, a key idea of kernel methods (Kernel Ridge regression, Support Vector Machine, ...).
+$K$ defines a Hilbert space of functions $X \rightarrow X$, analogous to a key idea of kernel methods (Kernel Ridge regression, Support Vector Machine, ...).
 
 The *Reproducing Kernel Hilbert Space* of $K$ is the closure of functions of the type
 $$f = K(-, x_1) c_1 + \dots + K(-, x_n) c_n.$$
@@ -594,10 +606,11 @@ $$f = K(-, x_1) c_1 + \dots + K(-, x_n) c_n.$$
 --
 
 .column-right[
-**Important.** Every such function $f$ is automatically equipped with a norm $\left\Vert - \right\Vert$.
-Small norm $\Leftrightarrow$ regular solution.
+<!-- **Important.** Every such function $f$ is automatically equipped with a norm $\left\Vert - \right\Vert$. -->
+<!-- Small norm $\Leftrightarrow$ regular solution. -->
 
 We look for $K$ such that the evaluation map $\varrho\colon H \times X \rightarrow X$ is a parametric machine.
+We call any such $K$ a *kernel machine*.
 ]
 
 ---
@@ -605,7 +618,7 @@ We look for $K$ such that the evaluation map $\varrho\colon H \times X \rightarr
 ### Kernel machines
 
 .column-left[
-**Theorem.** Let $\\{ x\_i \\}\_1 ^n$ be a training dataset.
+**Theorem.** Let $K$ be a kernel machine. Let $\\{ x\_i \\}\_1 ^n$ be a training dataset.
 For every machine $f \in H$, there exists a machine $\hat f \in H$ of the form
 $$\hat f = \sum_{i=1}^n K(-, x_i) c_i$$
 such that
@@ -620,7 +633,7 @@ count: false
 ### Kernel machines
 
 .column-left[
-**Theorem.** Let $\\{ x\_i \\}\_1 ^n$ be a training dataset.
+**Theorem.** Let $K$ be a kernel machine. Let $\\{ x\_i \\}\_1 ^n$ be a training dataset.
 For every machine $f \in H$, there exists a machine $\hat f \in H$ of the form
 $$\hat f = \sum_{i=1}^n K(-, x_i) c_i$$
 such that
