@@ -822,10 +822,20 @@ as well as their continuous counterparts such as Neural ODEs.
 - Finite- and infinite-depth kernel machines are suitable for small datasets.
 ]
 
---
+---
+
+### References
 
 .container[
-- Reference: [Vertechi, P., & Bergomi, M. G. (2020)](https://arxiv.org/abs/2007.02777)
+- arXiv preprint [Vertechi, P., & Bergomi, M. G. (2020)](https://arxiv.org/abs/2007.02777)
+
+- hypergraphs machines [PyTorch implementation](https://github.com/Veos-Digital/hypergraph_machines)
+
+- finite-depth kernel machines [PyTorch implementation](https://github.com/Veos-Digital/finite-depth-kernel-machines)
+
+- finite-depth kernel machines [julia implementation](https://github.com/Veos-Digital/KernelMachines.jl)
+
+- infinite-depth kernel machines [PyTorch implementation](https://github.com/Veos-Digital/infinite-depth-kernel-machines)
 ]
 
 ---
