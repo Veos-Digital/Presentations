@@ -32,8 +32,8 @@ layout: true
 
 .container[
 - At the moment, there is a divide between
-  - _no-code tools_ (simple but limited) and
-  - _full-blown programming environments_ (powerful but complex).
+  - simple but limited _no-code_ tools and
+  - powerful but complex _programming_ environments.
 ]
 
 ---
@@ -43,7 +43,7 @@ layout: true
 .container[
 Potential advantages of a simple and powerful data visualization tool.
 
-- Consulting projects require less time and effort.
+- Advisory projects require less time and effort.
 
 - Easier onboarding experience for new data scientists.
 ]
@@ -53,11 +53,11 @@ Potential advantages of a simple and powerful data visualization tool.
 <br>
 
 .container[
-A data visualizations framework makes possible the design of
+A data visualizations framework makes it possible to design
 
-- "power-user" UIs, targeted at data science departments, and
+- _power-user_ UIs, targeted at data science departments, and
 
-- simplified UIs, targeted at decision makers
+- _simplified_ UIs, targeted at decision makers
   - a means of distributing a custom analysis / ML technique.
 ]
 
@@ -65,7 +65,7 @@ A data visualizations framework makes possible the design of
 
 ### Design philosophy
 
-AlgebraOfGraphics aims to be a simple and general _language_ for data visualizations.
+AlgebraOfGraphics aims to be a simple and general language for data visualizations.
 
 --
 
@@ -77,7 +77,7 @@ __Explicit commands.__<br> Do not interpret user input but follow it literally.
 
 __Composable user-defined building blocks.__<br> Allow users to define their own building blocks, and combine them with `*` and `+`.
 
-__Opinionated visual defaults.__<br> Library, not user, is responsible for a consistent and inclusive visual style.
+__Opinionated visual defaults.__<br> The library, not the user, is responsible for a consistent and inclusive visual style.
 
 __Wide format support.__<br> Support a wide range of data formats. Do not require the user to manually convert.
 ]
