@@ -65,7 +65,7 @@ A data visualizations framework makes it possible to design
 
 ### Design philosophy
 
-AlgebraOfGraphics aims to be a simple and general language for data visualizations.
+[AlgebraOfGraphics](http://juliaplots.org/AlgebraOfGraphics.jl/stable/) aims to be a simple and general language for data visualizations.
 
 --
 
