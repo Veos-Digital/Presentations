@@ -1,0 +1,10 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz-cd}
+\begin{document}
+
+\begin{tikzcd}[column sep=small]
+    & F(\alpha) \arrow{r} & F(\beta) \arrow{rd} & & F(\alpha-\epsilon) \arrow{rd} \arrow{rrr} & & & F(\beta+\epsilon)\\
+    G(\alpha-\epsilon) \arrow{ru} \arrow{rrr} & & & G(\beta+\epsilon) & & G(\alpha) \arrow{r} & G(\beta) \arrow{ru}
+\end{tikzcd}
+
+\end{document}
