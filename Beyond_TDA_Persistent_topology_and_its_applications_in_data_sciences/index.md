@@ -83,7 +83,7 @@ count: false
 ### Motivations
 
 .column-right[
-  <img style ="" src="assets/aux.png" width="100%">
+  <img style ="" src="assets/auxiliary.png" width="100%">
 ]
 
 .column-left[
